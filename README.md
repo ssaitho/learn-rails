@@ -1,24 +1,15 @@
-# README
+# learn-rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Railsの遊び場
 
-Things you may want to cover:
+## Ruby version
 
-* Ruby version
+```
+ruby 3.2.2
+```
 
-* System dependencies
+## Rails version
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+Rails 7.0.8
+```
