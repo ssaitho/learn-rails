@@ -1,0 +1,10 @@
+%h1 新しい投稿
+= form_with model: @post, html: {class: 'form-container'} do |form|
+  .form-input
+    = form.label :title
+    = form.text_field :title
+  .form-input
+    = form.label :content
+    = form.text_area :content
+  .button-container
+    = form.submit '投稿', class: 'link-button'
