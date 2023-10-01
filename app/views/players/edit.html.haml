@@ -1,0 +1,25 @@
+%h1 選手編集
+= form_with model: @player, html: {class: 'form-container'} do |form|
+  .form-input
+    = form.label :name
+    = form.text_field :name
+  .form-input
+    = form.label :age
+    = form.text_field :age
+  .form-input
+    = form.label :birthday
+    = form.text_field :birthday
+  .form-input
+    = form.label :height
+    = form.text_field :height
+  .form-input
+    = form.label :weight
+    = form.text_field :weight
+  .form-input
+    = form.label :hometown
+    = form.text_field :hometown
+  .form-input
+    = form.label :pitching_and_batting
+    = form.text_field :pitching_and_batting
+  .button-container
+    = form.submit '保存', class: 'link-button'

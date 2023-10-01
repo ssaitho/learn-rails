@@ -1,0 +1,62 @@
+%h1 選手一覧
+
+.button-container
+  = link_to '新規作成', new_player_path, class: 'link-button'
+
+.search-container
+  .search-wrap
+    = form_with model: @player, method: :get do |form|
+      = form.text_field :search, placeholder: '検索', value: params[:search], class: 'search-input'
+      = form.submit '検索', class: 'link-button'
+
+.table-container
+  .table-wrap
+    %table
+      %thead
+        %tr
+          %th
+            ID
+          %th
+            作成日
+          %th
+            名前
+          %th
+            年齢
+          %th
+            誕生日
+          %th
+            身長
+          %th
+            体重
+          %th
+            出身地
+          %th
+            投打
+          %th
+            操作
+      %tbody
+        - @players.each do |player|
+          %tr
+            %td
+              = player.id
+            %td
+              = player.created_at.strftime("%Y/%m/%-d")
+            %td
+              = player.name
+            %td
+              = "#{player.age}歳"
+            %td
+              = player.birthday
+            %td
+              = "#{player.height}cm"
+            %td
+              = "#{player.weight}kg"
+            %td
+              = player.hometown
+            %td
+              = player.pitching_and_batting 
+            %td
+              .table-button-container
+                = link_to '編集', edit_player_path(player), class: 'table-edit-button'
+                = button_to '削除', player_path(player), method: :delete, class: 'table-delete-button'
+              
