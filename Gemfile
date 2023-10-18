@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 gem 'dotenv-rails'
 gem "haml-rails"
 gem 'erb2haml'
+gem 'ransack'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
